@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <header>
+    <section class="flex justify-between text-cyan-500 font-bold text-2xl">
+      <div class="ml-9 mt-3.5"><span class="bg-blue-600 text-white">Ajker</span> <Span>Kagoj</Span>
+      </div>
+      <div class="flex justify-between mr-9">
+        <p class="mx-3 mt-3.5">News</p>
+        <p class="mx-3 mt-3.5">Blog</p>
+        <p class="mx-3 mt-2"><img src="avatar-fotor.jpg" alt="" srcset="" height="50px" width="50px"></p>
+      </div>
+    </section>
+    <div class="mx-6 my-3">
+      <hr>
+    </div>
+    <!-- Navbar -->
+    <nav class="bg-white">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8" id="news_cat">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" id="cat-1">
+
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="newsfound bg-slate-400 h-16 mx-48">
+    <p class="font-bold">4 items found for category Entertainment</p>
+  </div>
+
+  <div class="card card-side bg-base-100 shadow-xl my-6 mx-6">
+    <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+    <div class="card-body">
+      <h2 class="card-title">New movie is released!</h2>
+      <p>Click the button to watch on Jetflix app.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Watch</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="fetch.js"></script>
+</body>
+
+</html>
