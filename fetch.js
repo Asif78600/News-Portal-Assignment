@@ -10,7 +10,7 @@ function catName(users){
         const nCat = document.getElementById("cat-1");
         const creation = document.createElement("div");
         creation.innerHTML=`
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="hidden sm:ml-6 sm:block" onclick="emnei(${user.category_id})">
                 <div class="flex space-x-4">
                   <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">${user.category_name}</a>
                 </div>
@@ -31,15 +31,21 @@ function catName(users){
     }
 
 }
-fetch("https://openapi.programming-hero.com/api/news/category/01")
-.then(res => res.json())
-.then(y => cardShuru(y.data));
 
-function cardShuru(authors){
-  for (ajaira of authors){
-    console.log(ajaira)
-  }
+function emnei(userName){
+    const url = `https://openapi.programming-hero.com/api/news/category/0${userName}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => loadDetails(data.data))
+    // console.log(url)
+}
 
+
+function loadDetails(details){
+    for (const detail of details){
+        console.log(detail.details)
+    }
+    
 }
 
 hafizul();
