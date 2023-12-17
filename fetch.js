@@ -17,7 +17,6 @@ function catName(users){
         `
         nCat.appendChild(creation)
         
-
         // phone responsive
         const mobileMenu = document.getElementById("mobile-menu");
         const mobileCreation = document.createElement("div");
@@ -27,7 +26,6 @@ function catName(users){
           </div>
         `
         mobileMenu.appendChild(mobileCreation)
-
     }
 
 }
@@ -42,11 +40,37 @@ function emnei(userName){
 
 
 function loadDetails(details){
+    const cardbody = document.getElementById("cardId");
+    cardbody.innerText ='';
     for (const detail of details){
-        console.log(detail.details)
+        console.log(detail.details.slice(0, 20) + '...');
+        // const catName = document.getElementById("catName");
+        // catName.innerText= detail.category_name;
+       
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div class="card card-side bg-base-100 shadow-xl my-9 mx-6">
+        <div class="w-1/4 p-4">
+            <figure><img src="${detail.image_url}", alt="Movie"/></figure>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title">${detail.details.slice(0, 20) + '...'}</h1>
+            <p>Click the button to watch on Jetflix app.</p>
+            <div class="card-actions justify-end">
+                <button class="btn btn-primary">Details</button>
+            </div>
+        </div>
+  </div>
+    `
+    cardbody.appendChild(div)
     }
+    const foundQty = document.getElementById("found");
+    foundQty.innerText= details.length;
+   
     
+
 }
+
 
 hafizul();
 
